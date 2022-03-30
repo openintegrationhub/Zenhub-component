@@ -1,0 +1,24 @@
+{
+  "dependencies": [
+    {
+      "blocking": {
+        "issue_number": 3953,
+        "repo_id": 1234567
+      },
+      "blocked": {
+        "issue_number": 1342,
+        "repo_id": 1234567
+      }
+    },
+    {
+      "blocking": {
+        "issue_number": 5,
+        "repo_id": 987
+      },
+      "blocked": {
+        "issue_number": 1342,
+        "repo_id": 1234567
+      }
+    }
+  ]
+}

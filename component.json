@@ -9,18 +9,11 @@
       "server": {
         "label": "Server",
         "viewClass": "SelectView",
-        "model": [
-          "https://{domain}/services/apexrest/spapi/v4 - The production API server",
-          "--- Custom URL"
-        ],
+        "model": [],
         "required": true
       },
       "otherServer": {
         "label": "Custom Server URL",
-        "viewClass": "TextFieldView"
-      },
-      "auth_bearerAuth": {
-        "label": "bearerAuth (Salesforce Access Token)",
         "viewClass": "TextFieldView"
       }
     }
@@ -31,109 +24,107 @@
       "title": "Function to run a lookup",
       "description": "Function to call an internal trigger or action"
     },
-    "getIssueEvents":{
-        "main": "./lib/triggers/trigger.js",
-        "title": "Get Issue Events",
-        "description": "Get the events for an issue.",
-        "callParams": {
-          "pathName": "/p1/repositories/:repo_id/issues/:issue_number/events",
-          "method": "get"
-        }
-      },
-      "getEpicsForRepository": {
-        "main": "./lib/triggers/trigger.js",
-        "title": "Get Epics for a repository",
-        "description": "Get all Epics for a repository",
-        "callParams": {
-          "pathName": "/p1/repositories/:repo_id/epics",
-          "method": "get"
-        }
-      },
-      "AddorremoveissuestoEpic": {
-        "main": "./lib/triggers/trigger.js",
-        "title": "Add or remove issues to Epic",
-        "description": "Bulk add or remove issues to an Epic. The result returns which issue was added or removed from the Epic.",
-        "callParams": {
-          "pathName": "/p1/repositories/:repo_id/epics/:issue_number/update_issues",
-          "requestContentType": "application/json" ,
-          "method": "post"
-        },
-        "bodyParams": [
-        {"name": "remove_issues",
-        "type": [{"repo_id": "Number", "issue_number": "Number"}],
-        "Comments": "Required, array of Objects with repo_id and issue_number"
-        },
-        {"name": "add_issues",
-        "type": [{"repo_id": "Number", "issue_number": "Number"}],
-        "Comments": "Required, array of Objects with repo_id and issue_number"
-        }
-      ]        
-      },
-      "GetZenHubWorkspacesforrepository": {
-        "main": "./lib/triggers/trigger.js",
-        "title": "Get ZenHub Workspaces for a repository",
-        "description": "Gets all Workspaces containing repo_id",
-        "callParams": {
-          "pathName": "/p2/repositories/:repo_id/workspaces",
-          "method": "get"
-        } 
-      },
-      "GetDependenciesforaRepository": {
-        "main": "./lib/triggers/trigger.js",
-        "title": "Get Dependencies for a Repository",
-        "description": "Gets all Dependencies",
-        "callParams": {
-          "pathName": "/p1/repositories/:repo_id/dependencies",
-          "method": "get"
-        } 
-      },
-      "GetReleaseReportsforaRepository": {
-        "main": "./lib/triggers/trigger.js",
-        "title": "Get Release Reports for a Repository",
-        "description": "Get Release Reports for a Repository",
-        "callParams": {
-          "pathName": "/p1/repositories/:repo_id/reports/releases",
-          "method": "get"
-        }
-      },
-       "GetalltheIssuesforaReleaseReport": {
-        "main": "./lib/triggers/trigger.js",
-        "title": "Get all the Issues for a Release Report",
-        "description": "Gets all the Issues for a Release Report",
-        "callParams": {
-          "pathName": "/p1/reports/release/:release_id/issues",
-          "method": "get"
-        }
-      },
-      "AddorRemoveIssuestoorfromaReleaseReport": {
-        "main": "./lib/triggers/trigger.js",
-        "title": "Add or Remove Issues to or from a Release Report",
-        "description": "Adds or Removes Issues to or from a Release Report",
-        "callParams": {
-          "pathName": "/p1/reports/release/:release_id/issues",
-          "requestContentType": "application/json" ,
-          "method": "patch"
-        },
-        "bodyParams": [
-        {"name": "add_issues",
-        "type": [{"repo_id": "Number", "issue_number": "Number"}],
-        "Comments": "Required, array of Objects with repo_id and issue_number"
-        },
-        {"name": "remove_issues",
-        "type": [{"repo_id": "Number", "issue_number": "Number"}],
-        "Comments": "Required, array of Objects with repo_id and issue_number"
-        }
-      ]  
+    "GetIssueEvents": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get Issue Events",
+      "description": "Get the events for an issue.",
+      "callParams": {
+        "pathName": "/p1/repositories/:repo_id/issues/:issue_number/events",
+        "method": "get"
       }
+    },
+    "GetEpicsForaRepository": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get Epics for a repository",
+      "description": "Get all Epics for a repository",
+      "callParams": {
+        "pathName": "/p1/repositories/:repo_id/epics",
+        "method": "get"
+      }
+    },
+    "AddOrRemoveIssuesToEpic": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Add-remove issues to Epic",
+      "description": "Bulk add or remove issues to an Epic. The result returns which issue was added or removed from the Epic.",
+      "callParams": {
+        "pathName": "/p1/repositories/:repo_id/epics/:issue_number/update_issues",
+        "requestContentType": "application/json",
+        "method": "post"
+      },
+      "bodyParams": [
+        {
+          "name": "remove_issues",
+          "type": [{ "repo_id": "Number", "issue_number": "Number" }],
+          "Comments": "Required, array of Objects with repo_id and issue_number"
+        },
+        {
+          "name": "add_issues",
+          "type": [{ "repo_id": "Number", "issue_number": "Number" }],
+          "Comments": "Required, array of Objects with repo_id and issue_number"
+        }
+      ]
+    },
+    "GetZenHubWorkspacesForaRepository": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get ZenHub Workspaces for a repository",
+      "description": "Gets all Workspaces containing repo_id",
+      "callParams": {
+        "pathName": "/p2/repositories/:repo_id/workspaces",
+        "method": "get"
+      }
+    },
+    "GetDependenciesForaRepository": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get Dependencies for a Repository",
+      "description": "Gets all Dependencies",
+      "callParams": {
+        "pathName": "/p1/repositories/:repo_id/dependencies",
+        "method": "get"
+      }
+    },
+    "GetReleaseReportsForaRepository": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get Release Reports for a Repository",
+      "description": "Get Release Reports for Repository",
+      "callParams": {
+        "pathName": "/p1/repositories/:repo_id/reports/releases",
+        "method": "get"
+      }
+    },
+    "GetAllTheIssuesForaReleaseReport": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Get all the Issues for a Release Report",
+      "description": "Gets all the Issues for Release Report",
+      "callParams": {
+        "pathName": "/p1/reports/release/:release_id/issues",
+        "method": "get"
+      }
+    },
+    "AddOrRemoveIssuesToOrFromaReleaseReport": {
+      "main": "./lib/triggers/trigger.js",
+      "title": "Add or Remove Issues to or from a Release Report",
+      "description": "Adds or Removes Issues to or from a Release Report",
+      "callParams": {
+        "pathName": "/p1/reports/release/:release_id/issues",
+        "requestContentType": "application/json",
+        "method": "patch"
+      },
+      "bodyParams": [
+        {
+          "name": "add_issues",
+          "type": [{ "repo_id": "Number", "issue_number": "Number" }],
+          "Comments": "Required, array of Objects with repo_id and issue_number"
+        },
+        {
+          "name": "remove_issues",
+          "type": [{ "repo_id": "Number", "issue_number": "Number" }],
+          "Comments": "Required, array of Objects with repo_id and issue_number"
+        }
+      ]
+    }
   },
-
-
-
-
-
-
   "actions": {
-    "getIssueData": {
+    "GetIssueData": {
       "main": "./lib/actions/action.js",
       "title": "Get Issue Data",
       "description": "Get the data for a specific issue",
@@ -142,43 +133,39 @@
         "method": "get"
       }
     },
-    "moveIssueBetweenPipelines": {
+    "MoveAnIssueBetweenPipelines": {
       "main": "./lib/actions/action.js",
       "title": "Move an Issue Between Pipelines",
       "description": "Moves an issue between Pipelines in a Workspace",
       "callParams": {
         "pathName": "/p2/workspaces/:workspace_id/repositories/:repo_id/issues/:issue_number/moves",
-        "requestContentType": "application/json" ,
+        "requestContentType": "application/json",
         "method": "post"
       },
       "bodyParams": [
-        {"name": "pipeline_id",
-        "type": "String",
-        "Comments": "Required"
-        },
-        {"name": "position",
-        "type": ["String", "Number"],
-        "Comments": "Required"
+        { "name": "pipeline_id", "type": "String", "Comments": "Required" },
+        {
+          "name": "position",
+          "type": ["String", "Number"],
+          "Comments": "Required"
         }
       ]
     },
-    "moveIssueBetweenPipelinesintheoldestWorkspace": {
+    "MoveAnIssueBetweenPipelinesInTheOldestWorkspace": {
       "main": "./lib/actions/action.js",
       "title": "Move an Issue Between Pipelines in the oldest Workspace",
       "description": "Moves an issue between Pipelines for a repository in your oldest Workspace",
       "callParams": {
         "pathName": "/p1/repositories/:repo_id/issues/:issue_number/moves",
-        "requestContentType": "application/json" ,
+        "requestContentType": "application/json",
         "method": "post"
       },
       "bodyParams": [
-        {"name": "pipeline_id",
-        "type": "String",
-        "Comments": "Required"
-        },
-        {"name": "position",
-        "type": ["String", "Number"],
-        "Comments": "Required"
+        { "name": "pipeline_id", "type": "String", "Comments": "Required" },
+        {
+          "name": "position",
+          "type": ["String", "Number"],
+          "Comments": "Required"
         }
       ]
     },
@@ -191,9 +178,10 @@
         "method": "put"
       },
       "bodyParams": [
-        {"name": "estimate",
-        "type": "Number",
-        "Comments": "Required, number representing estimate value"
+        {
+          "name": "estimate",
+          "type": "Number",
+          "Comments": "Required, number representing estimate value"
         }
       ]
     },
@@ -206,41 +194,42 @@
         "method": "get"
       }
     },
-    "convertIssueToEpic": {
+    "ConvertIssueToEpic": {
       "main": "./lib/actions/action.js",
       "title": "Convert Issue to Epic",
       "description": "Converts an issue to an Epic, along with any issues that should be part of it.",
       "callParams": {
         "pathName": "/p1/repositories/:repo_id/issues/:issue_number/convert_to_epic",
-        "requestContentType": "application/json" ,
+        "requestContentType": "application/json",
         "method": "post"
       },
       "bodyParams": [
-        {"name": "issues",
-        "type": [{"repo_id": "Number", "issue_number": "Number"}],
-        "Comments": "Required, array of Objects with repo_id and issue_number"
+        {
+          "name": "issues",
+          "type": [{ "repo_id": "Number", "issue_number": "Number" }],
+          "Comments": "Required, array of Objects with repo_id and issue_number"
         }
-      ]  
+      ]
     },
-    "GetaZenHubBoardforarepository": {
-        "main": "./lib/actions/action.js",
-        "title": "Get a ZenHub Board for a repository",
-        "description": "Get ZenHub Board data for a repository (repo_id) within the Workspace (workspace_id)",
-        "callParams": {
-          "pathName": "/p2/workspaces/:workspace_id/repositories/:repo_id/board",
-          "method": "get"
-        } 
-      },
-    "GettheoldestZenHubBoardforarepository": {
+    "GetAZenHubBoardForARepository": {
+      "main": "./lib/actions/action.js",
+      "title": "Get a ZenHub Board for a repository",
+      "description": "Get ZenHub Board data for a repository (repo_id) within the Workspace (workspace_id)",
+      "callParams": {
+        "pathName": "/p2/workspaces/:workspace_id/repositories/:repo_id/board",
+        "method": "get"
+      }
+    },
+    "GetTheOldestZenHubBoardForARepository": {
       "main": "./lib/actions/action.js",
       "title": "Get the oldest ZenHub Board for a repository",
       "description": "Get the oldest ZenHub Board data for a repository (repo_id) within the Workspace (workspace_id)",
       "callParams": {
         "pathName": "/p1/repositories/:repo_id/board",
         "method": "get"
-      } 
+      }
     },
-    "Setmilestonestartdate": {
+    "SetMilestoneStartDate": {
       "main": "./lib/actions/action.js",
       "title": "Set milestone start date",
       "description": "Sets a milestone start date",
@@ -249,13 +238,14 @@
         "method": "post"
       },
       "bodyParams": [
-        {"name": "start_date",
-        "type": "ISO8601 date string",
-        "Comments": "Required"
+        {
+          "name": "start_date",
+          "type": "ISO8601 date string",
+          "Comments": "Required"
         }
-      ]   
+      ]
     },
-    "Getmilestonestartdate": {
+    "GetMilestoneStartDate": {
       "main": "./lib/actions/action.js",
       "title": "Get milestone start date",
       "description": "Gets a milestone start date",
@@ -264,43 +254,37 @@
         "method": "get"
       }
     },
-    "CreateaDependency": {
+    "CreateADependency": {
       "main": "./lib/actions/action.js",
       "title": "Create a Dependency",
       "description": "Creates a Dependency",
       "callParams": {
         "pathName": "/p1/dependencies",
-        "requestContentType": "application/json" ,
+        "requestContentType": "application/json",
         "method": "post"
       },
       "bodyParams": [
-        {"name": "blocking",
-        "type": "Object",
-        "Comments": "Required"
+        { "name": "blocking", "type": "Object", "Comments": "Required" },
+        {
+          "name": "blocking.repo_id",
+          "type": "Number",
+          "Comments": "Required"
         },
-        {"name": "blocking.repo_id",
-        "type": "Number",
-        "Comments": "Required"
+        {
+          "name": "blocking.issue_number",
+          "type": "Number",
+          "Comments": "Required"
         },
-        {"name": "blocking.issue_number",
-        "type": "Number",
-        "Comments": "Required"
-        },
-        {"name": "blocked",
-        "type": "Object",
-        "Comments": "Required"
-        },
-        {"name": "blocked.repo_id",
-        "type": "Number",
-        "Comments": "Required"
-        },
-        {"name": "blocked.issue_number",
-        "type": "Number",
-        "Comments": "Required"
+        { "name": "blocked", "type": "Object", "Comments": "Required" },
+        { "name": "blocked.repo_id", "type": "Number", "Comments": "Required" },
+        {
+          "name": "blocked.issue_number",
+          "type": "Number",
+          "Comments": "Required"
         }
-      ]  
+      ]
     },
-    "RemoveaDependency": {
+    "RemoveADependency": {
       "main": "./lib/actions/action.js",
       "title": "Remove a Dependency",
       "description": "Removes a Dependency",
@@ -309,33 +293,27 @@
         "method": "delete"
       },
       "bodyParams": [
-        {"name": "blocking",
-        "type": "Object",
-        "Comments": "Required"
+        { "name": "blocking", "type": "Object", "Comments": "Required" },
+        {
+          "name": "blocking.repo_id",
+          "type": "Number",
+          "Comments": "Required"
         },
-        {"name": "blocking.repo_id",
-        "type": "Number",
-        "Comments": "Required"
+        {
+          "name": "blocking.issue_number",
+          "type": "Number",
+          "Comments": "Required"
         },
-        {"name": "blocking.issue_number",
-        "type": "Number",
-        "Comments": "Required"
-        },
-        {"name": "blocked",
-        "type": "Object",
-        "Comments": "Required"
-        },
-        {"name": "blocked.repo_id",
-        "type": "Number",
-        "Comments": "Required"
-        },
-        {"name": "blocked.issue_number",
-        "type": "Number",
-        "Comments": "Required"
+        { "name": "blocked", "type": "Object", "Comments": "Required" },
+        { "name": "blocked.repo_id", "type": "Number", "Comments": "Required" },
+        {
+          "name": "blocked.issue_number",
+          "type": "Number",
+          "Comments": "Required"
         }
-      ]  
+      ]
     },
-    "CreateaReleaseReport": {
+    "CreateAReleaseReport": {
       "main": "./lib/actions/action.js",
       "title": "Create a Release Report",
       "description": "Create a new Release Report",
@@ -345,29 +323,22 @@
         "method": "post"
       },
       "bodyParams": [
-        {"name": "title",
-        "type": "String",
-        "Comments": "Required"
+        { "name": "title", "type": "String", "Comments": "Required" },
+        { "name": "description", "type": "String", "Comments": "Optional" },
+        {
+          "name": "start_date",
+          "type": "ISO8601 date string",
+          "Comments": "Required"
         },
-        {"name": "description",
-        "type": "String",
-        "Comments": "Optional"
+        {
+          "name": "desired_end_date",
+          "type": "ISO8601 date string",
+          "Comments": "Required"
         },
-        {"name": "start_date",
-        "type": "ISO8601 date string",
-        "Comments": "Required"
-        },
-        {"name": "desired_end_date",
-        "type": "ISO8601 date string",
-        "Comments": "Required"
-        },
-        {"name": "repositories",
-        "type": "[Number]",
-        "Comments": "Optional"
-        }
-      ]  
+        { "name": "repositories", "type": "[Number]", "Comments": "Optional" }
+      ]
     },
-    "GetaReleaseReport": {
+    "GetAReleaseReport": {
       "main": "./lib/actions/action.js",
       "title": "Get a Release Report",
       "description": "Gets a Release Report",
@@ -376,7 +347,7 @@
         "method": "get"
       }
     },
-    "EditaReleaseReport": {
+    "EditAReleaseReport": {
       "main": "./lib/actions/action.js",
       "title": "Edit a Release Report",
       "description": "Edits a Release Report",
@@ -386,29 +357,26 @@
         "method": "patch"
       },
       "bodyParams": [
-        {"name": "title",
-        "type": "String",
-        "Comments": "Required"
+        { "name": "title", "type": "String", "Comments": "Required" },
+        { "name": "description", "type": "String", "Comments": "Optional" },
+        {
+          "name": "start_date",
+          "type": "ISO8601 date string",
+          "Comments": "Optional"
         },
-        {"name": "description",
-        "type": "String",
-        "Comments": "Optional"
+        {
+          "name": "desired_end_date",
+          "type": "ISO8601 date string",
+          "Comments": "Optional"
         },
-        {"name": "start_date",
-        "type": "ISO8601 date string",
-        "Comments": "Optional"
-        },
-        {"name": "desired_end_date",
-        "type": "ISO8601 date string",
-        "Comments": "Optional"
-        },
-        {"name": "state",
-        "type": "String",
-        "Comments": "Optional, open or closed"
+        {
+          "name": "state",
+          "type": "String",
+          "Comments": "Optional, open or closed"
         }
-      ] 
+      ]
     },
-    "AddaRepositorytoaReleaseReport": {
+    "AddARepositoryToAReleaseReport": {
       "main": "./lib/actions/action.js",
       "title": "Add a Repository to a Release Report",
       "description": "Adds a Repository to a Release Report",
@@ -418,7 +386,7 @@
         "method": "post"
       }
     },
-    "RemoveaRepositorytoaReleaseReport": {
+    "RemoveARepositoryToAReleaseReport": {
       "main": "./lib/actions/action.js",
       "title": "Remove a Repository to a Release Report",
       "description": "Removes a Repository to a Release Report",
@@ -426,6 +394,6 @@
         "pathName": "/p1/reports/release/:release_id/repository/:repo_id",
         "method": "delete"
       }
-    }  
+    }
   }
 }
