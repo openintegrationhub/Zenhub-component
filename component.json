@@ -31,6 +31,10 @@
       "callParams": {
         "pathName": "/p1/repositories/:repo_id/issues/:issue_number/events",
         "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/GetIssueEvents.in.json",
+        "out": "./lib/schemas/GetIssueEvents.out.json"
       }
     },
     "GetEpicsForaRepository": {
@@ -40,6 +44,10 @@
       "callParams": {
         "pathName": "/p1/repositories/:repo_id/epics",
         "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/GetEpicsForarepository.in.json",
+        "out": "./lib/schemas/GetEpicsForarepository.out.json"
       }
     },
     "AddOrRemoveIssuesToEpic": {
@@ -50,6 +58,10 @@
         "pathName": "/p1/repositories/:repo_id/epics/:issue_number/update_issues",
         "requestContentType": "application/json",
         "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/AddorremoveissuestoEpic.in.json",
+        "out": "./lib/schemas/AddorremoveissuestoEpic.out.json"
       },
       "bodyParams": [
         {
@@ -71,6 +83,10 @@
       "callParams": {
         "pathName": "/p2/repositories/:repo_id/workspaces",
         "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/GetZenHubWorkspacesforarepository.in.json",
+        "out": "./lib/schemas/GetZenHubWorkspacesforarepository.out.json"
       }
     },
     "GetDependenciesForaRepository": {
@@ -80,6 +96,10 @@
       "callParams": {
         "pathName": "/p1/repositories/:repo_id/dependencies",
         "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/GetDependenciesforaRepository.in.json",
+        "out": "./lib/schemas/GetDependenciesforaRepository.out.json"
       }
     },
     "GetReleaseReportsForaRepository": {
@@ -89,6 +109,10 @@
       "callParams": {
         "pathName": "/p1/repositories/:repo_id/reports/releases",
         "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/GetReleaseReportsforaRepository.in.json",
+        "out": "./lib/schemas/GetReleaseReportsforaRepository.out.json"
       }
     },
     "GetAllTheIssuesForaReleaseReport": {
@@ -98,6 +122,10 @@
       "callParams": {
         "pathName": "/p1/reports/release/:release_id/issues",
         "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/GetalltheIssuesforaReleaseReport.in.json",
+        "out": "./lib/schemas/GetalltheIssuesforaReleaseReport.out.json"
       }
     },
     "AddOrRemoveIssuesToOrFromaReleaseReport": {
@@ -108,6 +136,10 @@
         "pathName": "/p1/reports/release/:release_id/issues",
         "requestContentType": "application/json",
         "method": "patch"
+      },
+      "metadata": {
+        "in": "./lib/schemas/AddorRemoveIssuestoorfromaReleaseReport.in.json",
+        "out": "./lib/schemas/AddorRemoveIssuestoorfromaReleaseReport.out.json"
       },
       "bodyParams": [
         {
@@ -131,6 +163,10 @@
       "callParams": {
         "pathName": "/p1/repositories/:repo_id/issues/:issue_number",
         "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/getIssueData.in.json",
+        "out": "./lib/schemas/getIssueData.out.json"
       }
     },
     "MoveAnIssueBetweenPipelines": {
@@ -141,6 +177,10 @@
         "pathName": "/p2/workspaces/:workspace_id/repositories/:repo_id/issues/:issue_number/moves",
         "requestContentType": "application/json",
         "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/MoveanIssueBetweenPipelines.in.json",
+        "out": "./lib/schemas/MoveanIssueBetweenPipelines.out.json"
       },
       "bodyParams": [
         { "name": "pipeline_id", "type": "String", "Comments": "Required" },
@@ -160,6 +200,10 @@
         "requestContentType": "application/json",
         "method": "post"
       },
+      "metadata": {
+        "in": "./lib/schemas/MoveanIssueBetweenPipelinesintheoldestWorkspace.in.json",
+        "out": "./lib/schemas/MoveanIssueBetweenPipelinesintheoldestWorkspace.out.json"
+      },
       "bodyParams": [
         { "name": "pipeline_id", "type": "String", "Comments": "Required" },
         {
@@ -177,6 +221,10 @@
         "pathName": "/p1/repositories/:repo_id/issues/:issue_number/estimate",
         "method": "put"
       },
+      "metadata": {
+        "in": "./lib/schemas/SetIssueEstimate.in.json",
+        "out": "./lib/schemas/SetIssueEstimate.out.json"
+      },
       "bodyParams": [
         {
           "name": "estimate",
@@ -192,6 +240,10 @@
       "callParams": {
         "pathName": "/p1/repositories/:repo_id/epics/:epic_id",
         "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/GetEpicData.in.json",
+        "out": "./lib/schemas/GetEpicData.out.json"
       }
     },
     "ConvertIssueToEpic": {
@@ -202,6 +254,10 @@
         "pathName": "/p1/repositories/:repo_id/issues/:issue_number/convert_to_epic",
         "requestContentType": "application/json",
         "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/ConvertIssuetoEpic.in.json",
+        "out": "./lib/schemas/ConvertIssuetoEpic.out.json"
       },
       "bodyParams": [
         {
@@ -218,6 +274,10 @@
       "callParams": {
         "pathName": "/p2/workspaces/:workspace_id/repositories/:repo_id/board",
         "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/GetaZenHubBoardforarepository.in.json",
+        "out": "./lib/schemas/GetaZenHubBoardforarepository.out.json"
       }
     },
     "GetTheOldestZenHubBoardForARepository": {
@@ -227,6 +287,10 @@
       "callParams": {
         "pathName": "/p1/repositories/:repo_id/board",
         "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/GettheoldestZenHubboardforarepository.in.json",
+        "out": "./lib/schemas/GettheoldestZenHubboardforarepository.out.json"
       }
     },
     "SetMilestoneStartDate": {
@@ -236,6 +300,10 @@
       "callParams": {
         "pathName": "/p1/repositories/:repo_id/milestones/:milestone_number/start_date",
         "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/Setmilestonestartdate.in.json",
+        "out": "./lib/schemas/Setmilestonestartdate.out.json"
       },
       "bodyParams": [
         {
@@ -252,6 +320,10 @@
       "callParams": {
         "pathName": "/p1/repositories/:repo_id/milestones/:milestone_number/start_date",
         "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/Getmilestonestartdate.in.json",
+        "out": "./lib/schemas/Getmilestonestartdate.out.json"
       }
     },
     "CreateADependency": {
@@ -262,6 +334,10 @@
         "pathName": "/p1/dependencies",
         "requestContentType": "application/json",
         "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/CreateaDependency.in.json",
+        "out": "./lib/schemas/CreateaDependency.out.json"
       },
       "bodyParams": [
         { "name": "blocking", "type": "Object", "Comments": "Required" },
@@ -291,6 +367,10 @@
       "callParams": {
         "pathName": "/p1/dependencies",
         "method": "delete"
+      },
+      "metadata": {
+        "in": "./lib/schemas/RemoveaDependency.in.json",
+        "out": "./lib/schemas/RemoveaDependency.out.json"
       },
       "bodyParams": [
         { "name": "blocking", "type": "Object", "Comments": "Required" },
@@ -322,6 +402,10 @@
         "requestContentType": "application/json",
         "method": "post"
       },
+      "metadata": {
+        "in": "./lib/schemas/CreateaReleaseReport.in.json",
+        "out": "./lib/schemas/CreateaReleaseReport.out.json"
+      },
       "bodyParams": [
         { "name": "title", "type": "String", "Comments": "Required" },
         { "name": "description", "type": "String", "Comments": "Optional" },
@@ -345,6 +429,10 @@
       "callParams": {
         "pathName": "/p1/reports/release/:release_id",
         "method": "get"
+      },
+      "metadata": {
+        "in": "./lib/schemas/GetaReleaseReport.in.json",
+        "out": "./lib/schemas/GetaReleaseReport.out.json"
       }
     },
     "EditAReleaseReport": {
@@ -355,6 +443,10 @@
         "pathName": "/p1/reports/release/:release_id",
         "requestContentType": "application/json",
         "method": "patch"
+      },
+      "metadata": {
+        "in": "./lib/schemas/EditaReleaseReport.in.json",
+        "out": "./lib/schemas/EditaReleaseReport.out.json"
       },
       "bodyParams": [
         { "name": "title", "type": "String", "Comments": "Required" },
@@ -384,15 +476,23 @@
         "pathName": "/p1/reports/release/:release_id/repository/:repo_id",
         "requestContentType": "application/json",
         "method": "post"
+      },
+      "metadata": {
+        "in": "./lib/schemas/AddaRepositorytoaReleaseReport.in.json",
+        "out": "./lib/schemas/AddaRepositorytoaReleaseReport.out.json"
       }
     },
-    "RemoveARepositoryToAReleaseReport": {
+    "RemoveARepositoryFromAReleaseReport": {
       "main": "./lib/actions/action.js",
       "title": "Remove a Repository to a Release Report",
       "description": "Removes a Repository to a Release Report",
       "callParams": {
         "pathName": "/p1/reports/release/:release_id/repository/:repo_id",
         "method": "delete"
+      },
+      "metadata": {
+        "in": "./lib/schemas/RemoveaRepositoryfromaReleaseReport.in.json",
+        "out": "./lib/schemas/RemoveaRepositoryfromaReleaseReport.out.json"
       }
     }
   }
