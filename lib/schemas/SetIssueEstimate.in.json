@@ -1,1 +1,13 @@
-{ "estimate": 15 }
+{
+  "type": "object",
+  "properties": {
+    "requestBody": {
+    "estimate": {
+      "type": "object",
+        "properties": {
+          "pipeline_id": { "type": "number", "example": 15 }
+        }
+      }
+    }
+  }   
+}

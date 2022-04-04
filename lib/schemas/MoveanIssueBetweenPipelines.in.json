@@ -1,4 +1,19 @@
 {
-  "pipeline_id": "58bf13aba426771426665e60",
-  "position": "top"
+  "type": "object",
+  "properties": {
+    "requestBody": {
+    "remove_issues": {
+      "type": "object",
+        "properties": {
+          "pipeline_id": { "type": "string", "example": "58bf13aba426771426665e60" }
+        }
+    },
+    "position": {
+      "type": "object",
+        "properties": {
+          "repo_id": { "type":["Number", "String"] , "example": "top" }
+        }
+    }
+  }
+}
 }

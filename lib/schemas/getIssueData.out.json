@@ -1,28 +1,24 @@
 {
-  "estimate": {
-    "value": 8
-  },
-  "plus_ones": [
-    {
-      "created_at": "2015-12-11T18:43:22.296Z"
-    }
-  ],
-  "pipeline": {
-    "name": "QA",
-    "pipeline_id": "5d0a7a9741fd098f6b7f58a7",
-    "workspace_id": "5d0a7a9741fd098f6b7f58ac"
-  },
-  "pipelines": [
-    {
-      "name": "QA",
-      "pipeline_id": "5d0a7a9741fd098f6b7f58a7",
-      "workspace_id": "5d0a7a9741fd098f6b7f58ac"
+  "type": "object",
+  "properties": {
+    "remove_issues": {
+      "type": "array",
+      "items":{
+        "properties": {
+          "repo_id": { "type": "Number", "example": 92563409 },
+          "issue_number": { "type": "Number", "example": 3 }
+        }
+      }
     },
-    {
-      "name": "Done",
-      "pipeline_id": "5d0a7cea41fd098f6b7f58b7",
-      "workspace_id": "5d0a7cea41fd098f6b7f58b8"
+    "add_issues": {
+      "type": "array",
+      "items":{
+        "properties": {
+          "repo_id": { "type": "Number", "example": 92563409 },
+          "issue_number": { "type": "Number", "example": 14 }
+        }
+      }
     }
-  ],
-  "is_epic": true
+  
+  }
 }

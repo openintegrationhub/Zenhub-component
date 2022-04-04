@@ -1,10 +1,23 @@
 {
-  "blocking": {
-    "repo_id": 92563409,
-    "issue_number": 14
-  },
-  "blocked": {
-    "repo_id": 92563409,
-    "issue_number": 13
+  "type": "object",
+  "properties": {
+    "blocking": {
+      "type": "array",
+      "items":{
+      "properties": {
+        "repo_id": { "type": "Number", "example": 92563409 },
+        "issue_number": { "type": "Number", "example": 14 }
+      }
+      }
+    },
+    "blocked": {
+      "type": "array",
+       "items":{
+      "properties": {
+        "repo_id": { "type": "Number", "example": 92563409 },
+        "issue_number": { "type": "Number", "example": 13 }
+      }
+    }
+    }
   }
 }

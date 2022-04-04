@@ -1,7 +1,37 @@
 {
-  "title": "Great title",
-  "description": "Amazing description",
-  "start_date": "2007-01-01T00:00:00Z",
-  "desired_end_date": "2007-01-01T00:00:00Z",
-  "repositories": [103707262]
+  "type": "object",
+  "properties": {
+    "requestBody": {
+    "title": {
+      "type": "object",
+        "properties": {
+           "type": "String", "example": "Great title" 
+        }      
+    },
+    "description": {
+      "type": "object",
+        "properties": {
+           "type": "String", "example": "Amazing description" 
+        }      
+    },
+    "start_date": {
+      "type": "String",
+        "properties": {
+           "type": "ISO8601 date string", "example": "2010-11-13T01:38:56.842Z" 
+        }      
+    },
+    "desired_end_date": {
+      "type": "String",
+        "properties": {
+           "type": "ISO8601 date string", "example": "2010-11-13T01:38:56.842Z" 
+        }      
+    },
+    "repositories": {
+      "type": "Number",
+        "properties": {
+           "type": "[Number]", "example": [103707262]
+        }      
+    }
+  }
+}   
 }

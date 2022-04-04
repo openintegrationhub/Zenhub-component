@@ -1,7 +1,37 @@
 {
-  "title": "Amazing title",
-  "description": "Amazing description",
-  "start_date": "2007-01-01T00:00:00Z",
-  "desired_end_date": "2007-01-01T00:00:00Z",
-  "state": "closed"
+  "type": "object",
+  "properties": {
+    "requestBody": {
+    "title": {
+      "type": "String",
+        "properties": {
+           "type": "String", "example": "Great title" 
+        }      
+    },
+    "description": {
+      "type": "String",
+        "properties": {
+           "type": "String", "example": "Amazing description" 
+        }      
+    },
+    "start_date": {
+      "type": "String",
+        "properties": {
+           "type": "ISO8601 date string", "example": "2010-11-13T01:38:56.842Z" 
+        }      
+    },
+    "desired_end_date": {
+      "type": "String",
+        "properties": {
+           "type": "ISO8601 date string", "example": "2010-11-13T01:38:56.842Z" 
+        }      
+    },
+    "state": {
+      "type": "String",
+        "properties": {
+           "type": "String", "example": "closed"
+        }      
+    }
+  }   
+}
 }

@@ -1,7 +1,25 @@
 {
-  "remove_issues": [{ "repo_id": 13550592, "issue_number": 3 }],
-  "add_issues": [
-    { "repo_id": 13550592, "issue_number": 2 },
-    { "repo_id": 13550592, "issue_number": 1 }
-  ]
+  "type": "object",
+  "properties": {
+    "requestBody": {
+    "remove_issues": {
+      "type": "array",
+      "items":{
+        "properties": {
+          "repo_id": { "type": "Number", "example": 92563409 },
+          "issue_number": { "type": "Number", "example": 3 }
+        }
+      }
+    },
+    "add_issues": {
+      "type": "array",
+      "items":{
+        "properties": {
+          "repo_id": { "type": "Number", "example": 92563409 },
+          "issue_number": { "type": "Number", "example": 14 }
+        }
+      }
+    }
+  }
+  }
 }

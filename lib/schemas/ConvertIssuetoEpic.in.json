@@ -1,6 +1,16 @@
 {
-  "issues": [
-    { "repo_id": 13550592, "issue_number": 3 },
-    { "repo_id": 13550592, "issue_number": 1 }
-  ]
+  "type": "object",
+  "properties": {
+    "requestBody": {
+    "issues": {
+      "type": "array",
+        "items": {
+          "properties": {
+            "repo_id": { "type": "number", "example": 13550592 },
+            "issue_id": { "type": "number", "example": 3 }
+          }
+      }
+    }
+  }
+  }   
 }
