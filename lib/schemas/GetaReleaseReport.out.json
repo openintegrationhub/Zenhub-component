@@ -1,11 +1,35 @@
-{
-  "release_id": "59d3cd520a430a6344fd3bdb",
-  "title": "Test release",
-  "description": "",
-  "start_date": "2017-10-01T19:00:00.000Z",
-  "desired_end_date": "2017-10-03T19:00:00.000Z",
-  "created_at": "2017-10-03T17:48:02.701Z",
-  "closed_at": null,
-  "state": "open",
-  "repositories": [105683718]
+{"definitions": {
+	"release_id": {
+		"type": "string"
+	},
+	"title": {
+		"type": "string"
+	},
+	"description": {
+		"type": "string"
+	},
+	"start_date": {
+		"type": "string"
+	},
+	"desired_end_date": {
+		"type": "string"
+	},
+	"created_at": {
+		"type": "string"
+	},
+	"closed_at": {
+		"type": "string",
+		"format": "nullable"
+	},
+	"state": {
+		"type": "string"
+	},
+	"repositories": {
+		"type": "array",
+		"items": {
+			"type": "integer",
+			"format": "int32"
+		}
+	}
+}
 }

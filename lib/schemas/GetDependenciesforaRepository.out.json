@@ -1,24 +1,37 @@
-{
-  "dependencies": [
-    {
-      "blocking": {
-        "issue_number": 3953,
-        "repo_id": 1234567
-      },
-      "blocked": {
-        "issue_number": 1342,
-        "repo_id": 1234567
-      }
-    },
-    {
-      "blocking": {
-        "issue_number": 5,
-        "repo_id": 987
-      },
-      "blocked": {
-        "issue_number": 1342,
-        "repo_id": 1234567
-      }
-    }
-  ]
+{"definitions": {
+	"dependencies": {
+		"type": "array",
+		"items": {
+			"type": "object",
+			"properties": {
+				"blocking": {
+					"type": "object",
+					"properties": {
+						"issue_number": {
+							"type": "integer",
+							"format": "int32"
+						},
+						"repo_id": {
+							"type": "integer",
+							"format": "int32"
+						}
+					}
+				},
+				"blocked": {
+					"type": "object",
+					"properties": {
+						"issue_number": {
+							"type": "integer",
+							"format": "int32"
+						},
+						"repo_id": {
+							"type": "integer",
+							"format": "int32"
+						}
+					}
+				}
+			}
+		}
+	}
+}
 }

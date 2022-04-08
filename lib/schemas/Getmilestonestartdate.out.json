@@ -1,2 +1,6 @@
-{ "start_date": "2010-11-13T01:38:56.842Z" }
-
+{"definitions": {
+	"start_date": {
+		"type": "string"
+	}
+}
+}

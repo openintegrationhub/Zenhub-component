@@ -1,69 +1,111 @@
-{
-  "total_epic_estimates": { "value": 60 },
-  "estimate": { "value": 10 },
-  "pipeline": {
-    "workspace_id": "5d0a7a9741fd098f6b7f58ac",
-    "name": "Backlog",
-    "pipeline_id": "5d0a7a9741fd098f6b7f58a8"
-  },
-  "pipelines": [
-    {
-      "workspace_id": "5d0a7a9741fd098f6b7f58ac",
-      "name": "Backlog",
-      "pipeline_id": "5d0a7a9741fd098f6b7f58a8"
-    },
-    {
-      "workspace_id": "5d0a7cea41fd098f6b7f58b8",
-      "name": "In Progress",
-      "pipeline_id": "5d0a7cea41fd098f6b7f58b5"
-    }
-  ],
-  "issues": [
-    {
-      "issue_number": 3161,
-      "is_epic": true,
-      "repo_id": 1099029,
-      "estimate": { "value": 40 },
-      "pipelines": [
-        {
-          "workspace_id": "5d0a7a9741fd098f6b7f58ac",
-          "name": "Backlog",
-          "pipeline_id": "5d0a7a9741fd098f6b7f58a8"
-        },
-        {
-          "workspace_id": "5d0a7cea41fd098f6b7f58b8",
-          "name": "In Progress",
-          "pipeline_id": "5d0a7cea41fd098f6b7f58b5"
-        }
-      ],
-      "pipeline": {
-        "workspace_id": "5d0a7a9741fd098f6b7f58ac",
-        "name": "Backlog",
-        "pipeline_id": "5d0a7a9741fd098f6b7f58a8"
-      }
-    },
-    {
-      "issue_number": 2,
-      "is_epic": false,
-      "repo_id": 1234567,
-      "estimate": { "value": 10 },
-      "pipelines": [
-        {
-          "workspace_id": "5d0a7a9741fd098f6b7f58ac",
-          "name": "Backlog",
-          "pipeline_id": "5d0a7a9741fd098f6b7f58a8"
-        },
-        {
-          "workspace_id": "5d0a7cea41fd098f6b7f58b8",
-          "name": "In Progress",
-          "pipeline_id": "5d0a7cea41fd098f6b7f58b5"
-        }
-      ],
-      "pipeline": {
-        "workspace_id": "5d0a7a9741fd098f6b7f58ac",
-        "name": "Backlog",
-        "pipeline_id": "5d0a7a9741fd098f6b7f58a8"
-      }
-    }
-  ]
+{"definitions": {
+	"total_epic_estimates": {
+		"type": "object",
+		"properties": {
+			"value": {
+				"type": "integer",
+				"format": "int32"
+			}
+		}
+	},
+	"estimate": {
+		"type": "object",
+		"properties": {
+			"value": {
+				"type": "integer",
+				"format": "int32"
+			}
+		}
+	},
+	"pipeline": {
+		"type": "object",
+		"properties": {
+			"workspace_id": {
+				"type": "string"
+			},
+			"name": {
+				"type": "string"
+			},
+			"pipeline_id": {
+				"type": "string"
+			}
+		}
+	},
+	"pipelines": {
+		"type": "array",
+		"items": {
+			"type": "object",
+			"properties": {
+				"workspace_id": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"pipeline_id": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"issues": {
+		"type": "array",
+		"items": {
+			"type": "object",
+			"properties": {
+				"issue_number": {
+					"type": "integer",
+					"format": "int32"
+				},
+				"is_epic": {
+					"type": "boolean"
+				},
+				"repo_id": {
+					"type": "integer",
+					"format": "int32"
+				},
+				"estimate": {
+					"type": "object",
+					"properties": {
+						"value": {
+							"type": "integer",
+							"format": "int32"
+						}
+					}
+				},
+				"pipelines": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"workspace_id": {
+								"type": "string"
+							},
+							"name": {
+								"type": "string"
+							},
+							"pipeline_id": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"pipeline": {
+					"type": "object",
+					"properties": {
+						"workspace_id": {
+							"type": "string"
+						},
+						"name": {
+							"type": "string"
+						},
+						"pipeline_id": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		}
+	}
+}
 }

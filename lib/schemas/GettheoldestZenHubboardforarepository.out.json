@@ -1,55 +1,44 @@
-{
-  "pipelines": [
-    {
-      "id": "595d430add03f01d32460080",
-      "name": "New Issues",
-      "issues": [
-        {
-          "issue_number": 279,
-          "estimate": { "value": 40 },
-          "position": 0,
-          "is_epic": true
-        },
-        {
-          "issue_number": 142,
-          "is_epic": false
-        }
-      ]
-    },
-    {
-      "id": "595d430add03f01d32460081",
-      "name": "Backlog",
-      "issues": [
-        {
-          "issue_number": 303,
-          "estimate": { "value": 40 },
-          "position": 3,
-          "is_epic": false
-        }
-      ]
-    },
-    {
-      "id": "595d430add03f01d32460082",
-      "name": "To Do",
-      "issues": [
-        {
-          "issue_number": 380,
-          "estimate": { "value": 1 },
-          "position": 0,
-          "is_epic": true
-        },
-        {
-          "issue_number": 284,
-          "position": 2,
-          "is_epic": false
-        },
-        {
-          "issue_number": 329,
-          "estimate": { "value": 8 },
-          "position": 7,
-          "is_epic": false
-        }
-      ]
-    }
-  ]
-}
+{"definitions": {
+	"pipelines": {
+		"type": "array",
+		"items": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				},
+				"issues": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"issue_number": {
+								"type": "integer",
+								"format": "int32"
+							},
+							"estimate": {
+								"type": "object",
+								"properties": {
+									"value": {
+										"type": "integer",
+										"format": "int32"
+									}
+								}
+							},
+							"position": {
+								"type": "integer",
+								"format": "int32"
+							},
+							"is_epic": {
+								"type": "boolean"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}}
