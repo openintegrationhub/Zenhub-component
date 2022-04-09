@@ -62,19 +62,7 @@
       "metadata": {
         "in": "./lib/schemas/AddorremoveissuestoEpic.in.json",
         "out": "./lib/schemas/AddorremoveissuestoEpic.out.json"
-      },
-      "bodyParams": [
-        {
-          "name": "remove_issues",
-          "type": [{ "repo_id": "Number", "issue_number": "Number" }],
-          "Comments": "Required, array of Objects with repo_id and issue_number"
-        },
-        {
-          "name": "add_issues",
-          "type": [{ "repo_id": "Number", "issue_number": "Number" }],
-          "Comments": "Required, array of Objects with repo_id and issue_number"
-        }
-      ]
+      }
     },
     "GetZenHubWorkspacesForaRepository": {
       "main": "./lib/triggers/trigger.js",
@@ -140,19 +128,7 @@
       "metadata": {
         "in": "./lib/schemas/AddorRemoveIssuestoorfromaReleaseReport.in.json",
         "out": "./lib/schemas/AddorRemoveIssuestoorfromaReleaseReport.out.json"
-      },
-      "bodyParams": [
-        {
-          "name": "add_issues",
-          "type": [{ "repo_id": "Number", "issue_number": "Number" }],
-          "Comments": "Required, array of Objects with repo_id and issue_number"
-        },
-        {
-          "name": "remove_issues",
-          "type": [{ "repo_id": "Number", "issue_number": "Number" }],
-          "Comments": "Required, array of Objects with repo_id and issue_number"
-        }
-      ]
+      }
     }
   },
   "actions": {
@@ -181,15 +157,7 @@
       "metadata": {
         "in": "./lib/schemas/MoveanIssueBetweenPipelines.in.json",
         "out": "./lib/schemas/MoveanIssueBetweenPipelines.out.json"
-      },
-      "bodyParams": [
-        { "name": "pipeline_id", "type": "String", "Comments": "Required" },
-        {
-          "name": "position",
-          "type": ["String", "Number"],
-          "Comments": "Required"
-        }
-      ]
+      }
     },
     "MoveAnIssueBetweenPipelinesInTheOldestWorkspace": {
       "main": "./lib/actions/action.js",
@@ -203,15 +171,7 @@
       "metadata": {
         "in": "./lib/schemas/MoveanIssueBetweenPipelinesintheoldestWorkspace.in.json",
         "out": "./lib/schemas/MoveanIssueBetweenPipelinesintheoldestWorkspace.out.json"
-      },
-      "bodyParams": [
-        { "name": "pipeline_id", "type": "String", "Comments": "Required" },
-        {
-          "name": "position",
-          "type": ["String", "Number"],
-          "Comments": "Required"
-        }
-      ]
+      }
     },
     "SetIssueEstimated": {
       "main": "./lib/actions/action.js",
@@ -224,14 +184,7 @@
       "metadata": {
         "in": "./lib/schemas/SetIssueEstimate.in.json",
         "out": "./lib/schemas/SetIssueEstimate.out.json"
-      },
-      "bodyParams": [
-        {
-          "name": "estimate",
-          "type": "Number",
-          "Comments": "Required, number representing estimate value"
-        }
-      ]
+      }
     },
     "GetEpicData": {
       "main": "./lib/actions/action.js",
@@ -258,14 +211,7 @@
       "metadata": {
         "in": "./lib/schemas/ConvertIssuetoEpic.in.json",
         "out": "./lib/schemas/ConvertIssuetoEpic.out.json"
-      },
-      "bodyParams": [
-        {
-          "name": "issues",
-          "type": [{ "repo_id": "Number", "issue_number": "Number" }],
-          "Comments": "Required, array of Objects with repo_id and issue_number"
-        }
-      ]
+      }
     },
     "GetAZenHubBoardForARepository": {
       "main": "./lib/actions/action.js",
@@ -304,14 +250,7 @@
       "metadata": {
         "in": "./lib/schemas/Setmilestonestartdate.in.json",
         "out": "./lib/schemas/Setmilestonestartdate.out.json"
-      },
-      "bodyParams": [
-        {
-          "name": "start_date",
-          "type": "ISO8601 date string",
-          "Comments": "Required"
-        }
-      ]
+      }
     },
     "GetMilestoneStartDate": {
       "main": "./lib/actions/action.js",
@@ -338,27 +277,7 @@
       "metadata": {
         "in": "./lib/schemas/CreateaDependency.in.json",
         "out": "./lib/schemas/CreateaDependency.out.json"
-      },
-      "bodyParams": [
-        { "name": "blocking", "type": "Object", "Comments": "Required" },
-        {
-          "name": "blocking.repo_id",
-          "type": "Number",
-          "Comments": "Required"
-        },
-        {
-          "name": "blocking.issue_number",
-          "type": "Number",
-          "Comments": "Required"
-        },
-        { "name": "blocked", "type": "Object", "Comments": "Required" },
-        { "name": "blocked.repo_id", "type": "Number", "Comments": "Required" },
-        {
-          "name": "blocked.issue_number",
-          "type": "Number",
-          "Comments": "Required"
-        }
-      ]
+      }
     },
     "RemoveADependency": {
       "main": "./lib/actions/action.js",
@@ -371,27 +290,7 @@
       "metadata": {
         "in": "./lib/schemas/RemoveaDependency.in.json",
         "out": "./lib/schemas/RemoveaDependency.out.json"
-      },
-      "bodyParams": [
-        { "name": "blocking", "type": "Object", "Comments": "Required" },
-        {
-          "name": "blocking.repo_id",
-          "type": "Number",
-          "Comments": "Required"
-        },
-        {
-          "name": "blocking.issue_number",
-          "type": "Number",
-          "Comments": "Required"
-        },
-        { "name": "blocked", "type": "Object", "Comments": "Required" },
-        { "name": "blocked.repo_id", "type": "Number", "Comments": "Required" },
-        {
-          "name": "blocked.issue_number",
-          "type": "Number",
-          "Comments": "Required"
-        }
-      ]
+      }
     },
     "CreateAReleaseReport": {
       "main": "./lib/actions/action.js",
@@ -405,22 +304,7 @@
       "metadata": {
         "in": "./lib/schemas/CreateaReleaseReport.in.json",
         "out": "./lib/schemas/CreateaReleaseReport.out.json"
-      },
-      "bodyParams": [
-        { "name": "title", "type": "String", "Comments": "Required" },
-        { "name": "description", "type": "String", "Comments": "Optional" },
-        {
-          "name": "start_date",
-          "type": "ISO8601 date string",
-          "Comments": "Required"
-        },
-        {
-          "name": "desired_end_date",
-          "type": "ISO8601 date string",
-          "Comments": "Required"
-        },
-        { "name": "repositories", "type": "[Number]", "Comments": "Optional" }
-      ]
+      }
     },
     "GetAReleaseReport": {
       "main": "./lib/actions/action.js",
@@ -447,26 +331,7 @@
       "metadata": {
         "in": "./lib/schemas/EditaReleaseReport.in.json",
         "out": "./lib/schemas/EditaReleaseReport.out.json"
-      },
-      "bodyParams": [
-        { "name": "title", "type": "String", "Comments": "Required" },
-        { "name": "description", "type": "String", "Comments": "Optional" },
-        {
-          "name": "start_date",
-          "type": "ISO8601 date string",
-          "Comments": "Optional"
-        },
-        {
-          "name": "desired_end_date",
-          "type": "ISO8601 date string",
-          "Comments": "Optional"
-        },
-        {
-          "name": "state",
-          "type": "String",
-          "Comments": "Optional, open or closed"
-        }
-      ]
+      }
     },
     "AddARepositoryToAReleaseReport": {
       "main": "./lib/actions/action.js",
