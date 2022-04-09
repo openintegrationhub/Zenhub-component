@@ -1,22 +1,22 @@
-{"definitions": {
-	"epic_issues": {
-		"type": "array",
-		"items": {
-			"type": "object",
-			"properties": {
-				"issue_number": {
-					"type": "integer",
-					"format": "int32"
-				},
-				"repo_id": {
-					"type": "integer",
-					"format": "int32"
-				},
-				"issue_url": {
-					"type": "string"
-				}
-			}
-		}
-	}
-}
+{
+  "type": "object",
+  "epic_issues": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "issue_number": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "repo_id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "issue_url": {
+          "type": "string"
+        }
+      }
+    }
+  }
 }

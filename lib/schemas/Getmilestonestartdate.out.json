@@ -1,6 +1,8 @@
-{"definitions": {
-	"start_date": {
-		"type": "string"
-	}
-}
+{
+  "type": "object",
+  "properties": {
+    "start_date": {
+      "type": "string"
+    }
+  }
 }

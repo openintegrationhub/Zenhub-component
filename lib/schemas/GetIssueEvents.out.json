@@ -1,141 +1,43 @@
-{"definitions": {
-	"0": {
-		"type": "object",
-		"properties": {
-			"user_id": {
-				"type": "integer",
-				"format": "int32"
-			},
-			"type": {
-				"type": "string"
-			},
-			"created_at": {
-				"type": "string"
-			},
-			"from_estimate": {
-				"type": "object",
-				"properties": {
-					"value": {
-						"type": "integer",
-						"format": "int32"
-					}
-				}
-			}
-		}
-	},
-	"1": {
-		"type": "object",
-		"properties": {
-			"user_id": {
-				"type": "integer",
-				"format": "int32"
-			},
-			"type": {
-				"type": "string"
-			},
-			"created_at": {
-				"type": "string"
-			},
-			"from_estimate": {
-				"type": "object",
-				"properties": {
-					"value": {
-						"type": "integer",
-						"format": "int32"
-					}
-				}
-			},
-			"to_estimate": {
-				"type": "object",
-				"properties": {
-					"value": {
-						"type": "integer",
-						"format": "int32"
-					}
-				}
-			}
-		}
-	},
-	"2": {
-		"type": "object",
-		"properties": {
-			"user_id": {
-				"type": "integer",
-				"format": "int32"
-			},
-			"type": {
-				"type": "string"
-			},
-			"created_at": {
-				"type": "string"
-			},
-			"to_estimate": {
-				"type": "object",
-				"properties": {
-					"value": {
-						"type": "integer",
-						"format": "int32"
-					}
-				}
-			}
-		}
-	},
-	"3": {
-		"type": "object",
-		"properties": {
-			"user_id": {
-				"type": "integer",
-				"format": "int32"
-			},
-			"type": {
-				"type": "string"
-			},
-			"created_at": {
-				"type": "string"
-			},
-			"from_pipeline": {
-				"type": "object",
-				"properties": {
-					"name": {
-						"type": "string"
-					}
-				}
-			},
-			"to_pipeline": {
-				"type": "object",
-				"properties": {
-					"name": {
-						"type": "string"
-					}
-				}
-			},
-			"workspace_id": {
-				"type": "string"
-			}
-		}
-	},
-	"4": {
-		"type": "object",
-		"properties": {
-			"user_id": {
-				"type": "integer",
-				"format": "int32"
-			},
-			"type": {
-				"type": "string"
-			},
-			"created_at": {
-				"type": "string"
-			},
-			"to_pipeline": {
-				"type": "object",
-				"properties": {
-					"name": {
-						"type": "string"
-					}
-				}
-			}
-		}
-	}
-}
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "user_id": {
+        "type": "integer",
+        "format": "int32",
+        "example": "16717"
+      },
+      "type": {
+        "type": "string",
+        "example": "transferIssue"
+      },
+      "created_at": {
+        "type": "string",
+        "example": "2015-12-11T12:43:22.296Z"
+      },
+      "from_pipeline": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Backlog"
+          }
+        }
+      },
+      "to_pipeline": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "In progress"
+          }
+        }
+      },
+      "workspace_id": {
+        "type": "string",
+        "example": "5d0a7a9741fd098f6b7f58ac"
+      }
+    }
+  }
 }

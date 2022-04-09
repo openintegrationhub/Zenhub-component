@@ -1,46 +1,28 @@
-{"definitions": {
-	"0": {
-		"type": "object",
-		"properties": {
-			"name": {
-				"type": "string"
-			},
-			"description": {
-				"type": "string",
-				"format": "nullable"
-			},
-			"id": {
-				"type": "string"
-			},
-			"repositories": {
-				"type": "array",
-				"items": {
-					"type": "integer",
-					"format": "int32"
-				}
-			}
-		}
-	},
-	"1": {
-		"type": "object",
-		"properties": {
-			"name": {
-				"type": "string"
-			},
-			"description": {
-				"type": "string"
-			},
-			"id": {
-				"type": "string"
-			},
-			"repositories": {
-				"type": "array",
-				"items": {
-					"type": "integer",
-					"format": "int32"
-				}
-			}
-		}
-	}
-}
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "example": "Design and UX"
+      },
+      "description": {
+        "type": "string",
+        "format": "nullable"
+      },
+      "id": {
+        "type": "string",
+        "example": "5d0a7a9741fd098f6b7f58ac"
+      },
+      "repositories": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32",
+          "example": "12345678"
+        }
+      }
+    }
+  }
 }

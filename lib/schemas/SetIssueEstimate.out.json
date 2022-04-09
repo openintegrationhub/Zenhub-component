@@ -2,10 +2,9 @@
   "type": "object",
   "properties": {
     "estimate": {
-      "type": "object",
-        "properties": {
-          "pipeline_id": { "type": "number", "example": 15 }
-        }
-      }
-    }  
+      "type": "integer",
+      "format": "int32",
+      "example": "15"
+    }
+  }
 }

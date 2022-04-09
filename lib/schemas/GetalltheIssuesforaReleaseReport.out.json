@@ -1,29 +1,18 @@
-{"definitions": {
-	"0": {
-		"type": "object",
-		"properties": {
-			"repo_id": {
-				"type": "integer",
-				"format": "int32"
-			},
-			"issue_number": {
-				"type": "integer",
-				"format": "int32"
-			}
-		}
-	},
-	"1": {
-		"type": "object",
-		"properties": {
-			"repo_id": {
-				"type": "integer",
-				"format": "int32"
-			},
-			"issue_number": {
-				"type": "integer",
-				"format": "int32"
-			}
-		}
-	}
-}
+{
+  "properties": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "repo_id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "issue_number": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    }
+  }
 }

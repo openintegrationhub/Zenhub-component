@@ -1,57 +1,57 @@
-{"definitions": {
-	"estimate": {
-		"type": "object",
-		"properties": {
-			"value": {
-				"type": "integer",
-				"format": "int32"
-			}
-		}
-	},
-	"plus_ones": {
-		"type": "array",
-		"items": {
-			"type": "object",
-			"properties": {
-				"created_at": {
-					"type": "string"
-				}
-			}
-		}
-	},
-	"pipeline": {
-		"type": "object",
-		"properties": {
-			"name": {
-				"type": "string"
-			},
-			"pipeline_id": {
-				"type": "string"
-			},
-			"workspace_id": {
-				"type": "string"
-			}
-		}
-	},
-	"pipelines": {
-		"type": "array",
-		"items": {
-			"type": "object",
-			"properties": {
-				"name": {
-					"type": "string"
-				},
-				"pipeline_id": {
-					"type": "string"
-				},
-				"workspace_id": {
-					"type": "string"
-				}
-			}
-		}
-	},
-	"is_epic": {
-		"type": "boolean"
-	}
-}
+{
+  "type": "object",
+  "estimate": {
+    "type": "object",
+    "properties": {
+      "value": {
+        "type": "integer",
+        "format": "int32"
+      }
+    }
+  },
+  "plus_ones": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "created_at": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "pipeline": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "pipeline_id": {
+        "type": "string"
+      },
+      "workspace_id": {
+        "type": "string"
+      }
+    }
+  },
+  "pipelines": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "pipeline_id": {
+          "type": "string"
+        },
+        "workspace_id": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "is_epic": {
+    "type": "boolean"
+  }
 }

@@ -1,33 +1,33 @@
-{"definitions": {
+{
+	"type": "object",
 	"dependencies": {
-		"type": "array",
-		"items": {
-			"type": "object",
-			"properties": {
-				"blocking": {
-					"type": "object",
-					"properties": {
-						"issue_number": {
-							"type": "integer",
-							"format": "int32"
-						},
-						"repo_id": {
-							"type": "integer",
-							"format": "int32"
-						}
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"blocking": {
+				"type": "object",
+				"properties": {
+					"issue_number": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"repo_id": {
+						"type": "integer",
+						"format": "int32"
 					}
-				},
-				"blocked": {
-					"type": "object",
-					"properties": {
-						"issue_number": {
-							"type": "integer",
-							"format": "int32"
-						},
-						"repo_id": {
-							"type": "integer",
-							"format": "int32"
-						}
+				}
+			},
+			"blocked": {
+				"type": "object",
+				"properties": {
+					"issue_number": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"repo_id": {
+						"type": "integer",
+						"format": "int32"
 					}
 				}
 			}

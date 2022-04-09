@@ -2,10 +2,8 @@
   "type": "object",
   "properties": {
     "start_date": {
-      "type": "String",
-        "properties": {
-           "type": "ISO8601 date string", "example": "2010-11-13T01:38:56.842Z" 
-        }      
-      }
-    } 
+      "type": "string",
+      "example": "2010-11-13T01:38:56.842Z"
+    }
+  }
 }
