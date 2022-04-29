@@ -3,21 +3,21 @@
   "properties": {
     "blocking": {
       "type": "array",
-      "items":{
-      "properties": {
-        "repo_id": { "type": "Number", "example": 92563409 },
-        "issue_number": { "type": "Number", "example": 14 }
-      }
+      "items": {
+        "properties": {
+          "repo_id": { "type": "Number", "example": 92563409 },
+          "issue_number": { "type": "Number", "example": 14 }
+        }
       }
     },
     "blocked": {
       "type": "array",
-       "items":{
-      "properties": {
-        "repo_id": { "type": "Number", "example": 92563409 },
-        "issue_number": { "type": "Number", "example": 13 }
+      "items": {
+        "properties": {
+          "repo_id": { "type": "Number", "example": 92563409 },
+          "issue_number": { "type": "Number", "example": 13 }
+        }
       }
-    }
     }
   }
 }

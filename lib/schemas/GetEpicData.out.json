@@ -1,128 +1,128 @@
 {
-	"type": "object",
-	"total_epic_estimates": {
-		"type": "object",
-		"properties": {
-			"value": {
-				"type": "integer",
-				"format": "int32",
-				"example": "60"
-			}
-		}
-	},
-	"estimate": {
-		"type": "object",
-		"properties": {
-			"value": {
-				"type": "integer",
-				"format": "int32",
-				"example": "10"
-			}
-		}
-	},
-	"pipeline": {
-		"type": "object",
-		"properties": {
-			"workspace_id": {
-				"type": "string",
-				"example": "5d0a7a9741fd098f6b7f58ac"
-			},
-			"name": {
-				"type": "string",
-				"example": "Backlog"
-			},
-			"pipeline_id": {
-				"type": "string",
-				"example": "5d0a7a9741fd098f6b7f58a8"
-			}
-		}
-	},
-	"pipelines": {
-		"type": "array",
-		"items": {
-			"type": "object",
-			"properties": {
-				"workspace_id": {
-					"type": "string",
-					"example": "5d0a7a9741fd098f6b7f58ac"
-				},
-				"name": {
-					"type": "string",
-					"example": "Backlog"
-				},
-				"pipeline_id": {
-					"type": "string",
-					"example": "5d0a7a9741fd098f6b7f58a8"
-				}
-			}
-		}
-	},
-	"issues": {
-		"type": "array",
-		"items": {
-			"type": "object",
-			"properties": {
-				"issue_number": {
-					"type": "integer",
-					"format": "int32",
-					"example": "3161"
-				},
-				"is_epic": {
-					"type": "boolean"
-				},
-				"repo_id": {
-					"type": "integer",
-					"format": "int32",
-					"example": "1099029"
-				},
-				"estimate": {
-					"type": "object",
-					"properties": {
-						"value": {
-							"type": "integer",
-							"format": "int32",
-							"example": "40"
-						}
-					}
-				},
-				"pipelines": {
-					"type": "array",
-					"items": {
-						"type": "object",
-						"properties": {
-							"workspace_id": {
-								"type": "string",
-								"example": "5d0a7a9741fd098f6b7f58ac"
-							},
-							"name": {
-								"type": "string",
-								"example": "Backlog"
-							},
-							"pipeline_id": {
-								"type": "string",
-								"example": "5d0a7a9741fd098f6b7f58a8"
-							}
-						}
-					}
-				},
-				"pipeline": {
-					"type": "object",
-					"properties": {
-						"workspace_id": {
-							"type": "string",
-							"example": "5d0a7a9741fd098f6b7f58ac"
-						},
-						"name": {
-							"type": "string",
-							"example": "Backlog"
-						},
-						"pipeline_id": {
-							"type": "string",
-							"example": "5d0a7a9741fd098f6b7f58a8"
-						}
-					}
-				}
-			}
-		}
-	}
+  "type": "object",
+  "total_epic_estimates": {
+    "type": "object",
+    "properties": {
+      "value": {
+        "type": "integer",
+        "format": "int32",
+        "example": "60"
+      }
+    }
+  },
+  "estimate": {
+    "type": "object",
+    "properties": {
+      "value": {
+        "type": "integer",
+        "format": "int32",
+        "example": "10"
+      }
+    }
+  },
+  "pipeline": {
+    "type": "object",
+    "properties": {
+      "workspace_id": {
+        "type": "string",
+        "example": "5d0a7a9741fd098f6b7f58ac"
+      },
+      "name": {
+        "type": "string",
+        "example": "Backlog"
+      },
+      "pipeline_id": {
+        "type": "string",
+        "example": "5d0a7a9741fd098f6b7f58a8"
+      }
+    }
+  },
+  "pipelines": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "workspace_id": {
+          "type": "string",
+          "example": "5d0a7a9741fd098f6b7f58ac"
+        },
+        "name": {
+          "type": "string",
+          "example": "Backlog"
+        },
+        "pipeline_id": {
+          "type": "string",
+          "example": "5d0a7a9741fd098f6b7f58a8"
+        }
+      }
+    }
+  },
+  "issues": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "issue_number": {
+          "type": "integer",
+          "format": "int32",
+          "example": "3161"
+        },
+        "is_epic": {
+          "type": "boolean"
+        },
+        "repo_id": {
+          "type": "integer",
+          "format": "int32",
+          "example": "1099029"
+        },
+        "estimate": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "integer",
+              "format": "int32",
+              "example": "40"
+            }
+          }
+        },
+        "pipelines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "workspace_id": {
+                "type": "string",
+                "example": "5d0a7a9741fd098f6b7f58ac"
+              },
+              "name": {
+                "type": "string",
+                "example": "Backlog"
+              },
+              "pipeline_id": {
+                "type": "string",
+                "example": "5d0a7a9741fd098f6b7f58a8"
+              }
+            }
+          }
+        },
+        "pipeline": {
+          "type": "object",
+          "properties": {
+            "workspace_id": {
+              "type": "string",
+              "example": "5d0a7a9741fd098f6b7f58ac"
+            },
+            "name": {
+              "type": "string",
+              "example": "Backlog"
+            },
+            "pipeline_id": {
+              "type": "string",
+              "example": "5d0a7a9741fd098f6b7f58a8"
+            }
+          }
+        }
+      }
+    }
+  }
 }

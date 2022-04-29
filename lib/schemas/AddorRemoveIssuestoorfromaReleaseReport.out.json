@@ -3,7 +3,7 @@
   "properties": {
     "remove_issues": {
       "type": "array",
-      "items":{
+      "items": {
         "properties": {
           "repo_id": { "type": "Number", "example": 92563409 },
           "issue_number": { "type": "Number", "example": 3 }
@@ -12,7 +12,7 @@
     },
     "add_issues": {
       "type": "array",
-      "items":{
+      "items": {
         "properties": {
           "repo_id": { "type": "Number", "example": 92563409 },
           "issue_number": { "type": "Number", "example": 14 }

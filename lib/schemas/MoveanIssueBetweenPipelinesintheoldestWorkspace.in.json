@@ -2,17 +2,16 @@
   "type": "object",
   "properties": {
     "requestBody": {
-      "properties":{
-
-      "pipeline_id": {
-        "type": "string",
-        "example": "58bf13aba426771426665e60"
-      },
-      "position": {
-        "type": "string",
-        "example": "top"
+      "properties": {
+        "pipeline_id": {
+          "type": "string",
+          "example": "58bf13aba426771426665e60"
+        },
+        "position": {
+          "type": "string",
+          "example": "top"
+        }
       }
     }
-  }
   }
 }
