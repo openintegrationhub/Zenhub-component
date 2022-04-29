@@ -2,6 +2,7 @@
   "type": "object",
   "properties": {
     "requestBody": {
+      "properties":{
     "remove_issues": {
       "type": "array",
       "items":{
@@ -21,5 +22,6 @@
       }
     }
   }
+}
   }
 }
