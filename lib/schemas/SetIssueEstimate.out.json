@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "estimate": {
+      "type": "integer",
+      "format": "int32",
+      "example": "15"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "properties": {
+    "requestBody": {
+      "properties": {
+        "blocking": {
+          "type": "object",
+          "properties": {
+            "repo_id": {
+              "type": "integer",
+              "format": "int32",
+              "example": "92563409"
+            },
+            "issue_number": {
+              "type": "integer",
+              "format": "int32",
+              "example": "14"
+            }
+          }
+        },
+        "blocked": {
+          "type": "object",
+          "properties": {
+            "repo_id": {
+              "type": "integer",
+              "format": "int32",
+              "example": "92563409"
+            },
+            "issue_number": {
+              "type": "integer",
+              "format": "int32",
+              "example": "13"
+            }
+          }
+        }
+      }
+    }
+  }
+}

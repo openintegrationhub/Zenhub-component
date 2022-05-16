@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "repo_id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "issue_number": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    }
+  }
+}

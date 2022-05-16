@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "requestBody": {
+      "properties": {
+        "start_date": {
+          "type": "string",
+          "example": "2010-11-13T01:38:56.842Z"
+        }
+      }
+    }
+  }
+}

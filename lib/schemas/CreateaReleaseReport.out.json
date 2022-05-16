@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "properties": {
+    "release_id": {
+      "type": "string",
+      "example": "59dff4f508399a35a276a1ea"
+    },
+    "created_at": {
+      "type": "string",
+      "example": "2017-10-12T23:04:21.795Z"
+    },
+    "closed_at": {
+      "type": "string",
+      "format": "nullable"
+    },
+    "state": {
+      "type": "string",
+      "example": "open"
+    },
+    "title": {
+      "type": "String",
+      "example": "Great title"
+    },
+    "description": {
+      "type": "String",
+      "example": "Amazing description"
+    },
+    "start_date": {
+      "type": "ISO8601 date string",
+      "example": "2010-11-13T01:38:56.842Z"
+    },
+    "desired_end_date": {
+      "type": "ISO8601 date string",
+      "example": "2010-11-13T01:38:56.842Z"
+    },
+    "repositories": {
+      "type": "array",
+      "items": {
+        "type": "Number",
+        "example": [103707262]
+      }
+    }
+  }
+}

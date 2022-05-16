@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "title": { "type": "String", "example": "Great title" },
+    "description": {
+      "type": "String",
+      "example": "Amazing description"
+    },
+    "start_date": {
+      "type": "ISO8601 date string",
+      "example": "2010-11-13T01:38:56.842Z"
+    },
+    "desired_end_date": {
+      "type": "ISO8601 date string",
+      "example": "2010-11-13T01:38:56.842Z"
+    },
+    "state": {
+      "type": "String",
+      "example": "closed"
+    }
+  }
+}
